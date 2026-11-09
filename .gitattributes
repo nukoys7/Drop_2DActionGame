@@ -1,2 +1,33 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# --- Unity の YAML アセット ---------------------------------------------
+# merge=unityyamlmerge は各自の git config に UnityYAMLMerge を登録すると有効になる
+# (未登録なら通常のテキストマージになる)。登録例(パスは各自の Unity に合わせる):
+#   git config --global merge.unityyamlmerge.driver "'<Unity>/Editor/Data/Tools/UnityYAMLMerge.exe' merge -p %O %B %A %A"
+*.unity              text eol=lf merge=unityyamlmerge
+*.prefab             text eol=lf merge=unityyamlmerge
+*.asset              text eol=lf merge=unityyamlmerge
+*.meta               text eol=lf merge=unityyamlmerge
+*.mat                text eol=lf merge=unityyamlmerge
+*.anim               text eol=lf merge=unityyamlmerge
+*.controller         text eol=lf merge=unityyamlmerge
+*.overrideController text eol=lf merge=unityyamlmerge
+*.physicsMaterial2D  text eol=lf merge=unityyamlmerge
+*.inputactions       text eol=lf
+
+# --- コード ---------------------------------------------------------------
+*.cs                 text diff=csharp
+*.asmdef             text eol=lf
+
+# --- バイナリ(マージしない) ---------------------------------------------
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.psd  binary
+*.aseprite binary
+*.wav  binary
+*.mp3  binary
+*.ogg  binary
+*.ttf  binary
+*.otf  binary
