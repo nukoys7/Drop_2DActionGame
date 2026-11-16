@@ -62,6 +62,14 @@ Unity 製の 2D アクションゲーム「Drop_2DActionGame(仮称)」を5人�
 - プレハブは Item レイヤーに置き、Collider は Trigger にする。
 - 同じ補正は重なって掛かる(1.5 倍を2回で 2.25 倍)。
 
+### レア度
+
+- レア度は `ItemRarity` の Common、Uncommon、Rare、Epic、Legendary の5段階。色はコモンが白、アンコモンが緑、レアが青、エピックがピンク、レジェンダリーが黄。
+- プレハブに `ItemRarityAura` を追加し、Inspector の Rarity を選ぶと、アイテムの輪郭からレア度の色のオーラが出る。オーラはどのスプライトにも自動で付く。
+- Aura Material に `Sprite-Unlit-Default` を設定すると、暗い場所でもオーラが光る。
+- 見本は `Prefabs/Items/Konjac/Pickup_Konjac.prefab`(ドット絵のこんにゃく、レジェンダリー)。
+- UI などでレア度の色を使うときは `ItemRarityColors.Get` で取得し、色を直接書かない。
+
 ## Git
 
 `main` は GitHub のルールセットで保護されている。現在は全ブランチが対象で、次の動作になる。
