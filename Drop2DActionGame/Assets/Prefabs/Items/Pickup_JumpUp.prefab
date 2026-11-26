@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3692177666984192624}
   - component: {fileID: 5530205329734996316}
   - component: {fileID: 3330947704246606488}
+  - component: {fileID: 1094776248400223672}
   m_Layer: 11
   m_Name: Pickup_JumpUp
   m_TagString: Untagged
@@ -82,6 +83,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 755636a60349ca848a4dd9c071d1d778, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::JumpUp
+  stat: 4
+  kind: 1
+  value: 1.5
+  duration: 5
+--- !u!114 &1094776248400223672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3488462871650611528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eca8620dc7430449997634c4e84154c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Drop.ItemRarityAura
+  rarity: 1
+  target: {fileID: 7029194956226581496}
+  auraMaterial: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
+  glowWidth: 0.15
+  pulseSpeed: 3
+  waveInterval: 1.2
+  waveScale: 0.35
 --- !u!1 &6975492766113319298
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +133,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 0.6, z: 1}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3692177666984192624}
@@ -163,8 +187,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 9530de8663931324c8432d1d5230403b, type: 3}
-  m_Color: {r: 0.3, g: 0.9, b: 0.4, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0b546430f8164444b82699b3911b0bf9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
