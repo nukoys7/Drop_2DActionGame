@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3692177666984192624}
   - component: {fileID: 5530205329734996316}
-  - component: {fileID: 3186246780880947148}
   - component: {fileID: 1156289758840962272}
   - component: {fileID: 8560235129208109104}
   - component: {fileID: 1316644543130622102}
+  - component: {fileID: 6181230750558164400}
   m_Layer: 11
   m_Name: Pickup_Konjac
   m_TagString: Untagged
@@ -73,19 +73,6 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.35
---- !u!114 &3186246780880947148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3488462871650611528}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34afdee02d1288642a2f614bd712c8f9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Drop.HealPickup
-  amount: 2
 --- !u!114 &1156289758840962272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,6 +165,25 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.525, y: 0.35}
   m_EdgeRadius: 0
+--- !u!114 &6181230750558164400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3488462871650611528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8334c02e43b300b48ad989383abc59f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Drop.StatBoostPickup
+  boosts:
+  - stat: 3
+    kind: 1
+    value: 1.5
+    duration: 10
+  heal: 0
+  invincibleSeconds: 10
 --- !u!1 &6975492766113319298
 GameObject:
   m_ObjectHideFlags: 0
